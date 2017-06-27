@@ -1,0 +1,63 @@
+<!DOCTYPE HTML5>
+<html>
+    <head>
+        <title>My Homepage App</title>
+
+         <link rel="stylesheet" type="text/css" href="/Users/DWAYNE/Desktop/My-Homepage-App/css/stylesheet.css"/>
+
+    </head>
+
+<body>
+    <img a href="" height="50" width="50"
+        src="file:///Users/DWAYNE/Desktop/My-Homepage-App/Images/Settings%20Button%20.png">
+
+<button type="button" class="button" style="float:right";>Logout</button></h3>
+
+    <center>
+        <a href="index.html">
+        <img src="file:///Users/DWAYNE/Desktop/My-Homepage-App/Images/BlueGreenLogo.png"
+        height="350" width ="350" >
+    </a>
+
+        <h1 class="header">Welcome Darrell!</h1>
+
+
+<form method= 'post'>
+    <p>
+        <label for="addlink">
+            Enter the URL:
+            <input id ="addlink" name="link" type="text">
+        </label>
+
+        <input type="submit" value="Add Your Link!" />
+    </p>
+</form>
+    <div>
+        <h3>My Links</h3>
+
+        <hr />
+
+            {% if links|length == 0 %}
+            <p>You haven't added any links yet!</p>
+            {% else%}
+                <ul>
+                    {% for link in links %}
+                    <li> {{link}} </li>
+                    {% endfor %}
+                </ul>
+
+            {% endif %}
+
+
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    <footer>&copy; 2017, Created by <a href="https://www.darrellthedeveloper.com/" style="float:bottom">DarrellTheDeveloper.com</a></footer>
+    </center>
+</body>
+</html>

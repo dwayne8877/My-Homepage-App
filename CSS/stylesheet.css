@@ -1,0 +1,44 @@
+body{
+    background-color:#D6EAF8;
+}
+
+.button {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.submit{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.header{
+    color:;
+    font-family:;
+    font-style: italic;
+}
+h3{
+    color:#4CAF50;
+    font-family: arial;
+}
+
+.icons{
+    height: 100;
+    width: 100;
+}
