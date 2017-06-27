@@ -20,17 +20,17 @@ def index():
     template = jinja_env.get_template('userpage.html')
     return template.render()
 
-newlinks= []
+links= []
 
-@app.route("/newlink", methods=['POST', 'GET'])
+@app.route("/mylinks", methods=['POST', 'GET'])
 def newlink():
 
     if request.method == 'POST':
         link= request.form['link']
-        newlinks.append(link)
+        links.append(link)
 
     template = jinja_env.get_template('userpage.html')
-    return template.render(title='newlink', links=links)
+    return template.render(links=links)
 
 
 app.run()
