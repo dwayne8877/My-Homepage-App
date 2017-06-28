@@ -1,10 +1,8 @@
 <!DOCTYPE HTML5>
 <html>
     <head>
-        <title>My Homepage App</title>
-
-         <link rel="stylesheet" type="text/css" href="/Users/DWAYNE/Desktop/My-Homepage-App/static/CSS/styles.css"/>
-
+        <title>My Links</title>
+            <link rel="stylesheet" type="text/css" href="static/CSS/styles.css"/>
     </head>
 
 <body>
@@ -15,8 +13,7 @@
 
     <center>
         <a href="index.html">
-        <img src="file:///Users/DWAYNE/Desktop/My-Homepage-App/static/Images/BlueGreenLogo.png"
-        height="350" width ="350" >
+            <img src="static/Images/BlueGreenLogo.png" height="350" width ="350" >
     </a>
 
         <h1 class="header">Welcome Darrell!</h1>
@@ -32,10 +29,12 @@
         <input type="submit" value="Add Your Link!" />
     </p>
 </form>
+
+<hr />
     <div>
         <h3>My Links</h3>
 
-        <hr />
+
 
             {% if links|length == 0 %}
             <p>You haven't added any links yet!</p>

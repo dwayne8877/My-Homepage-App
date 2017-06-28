@@ -1,15 +1,11 @@
-from flask import Flask,request,redirect
+from flask import Flask,request,redirect, render_template
 import cgi
 import os
-import jinja2
+
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
 
-template_dir = os.path.join(os.path.dirname(__file__),'templates')
-
-jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir),
-autoescape= True)
 
 #@app.route("/")
 #def index():
@@ -17,8 +13,8 @@ autoescape= True)
 
 @app.route("/")
 def index():
-    template = jinja_env.get_template('userpage.html')
-    return template.render()
+    return render_template('userpage.html', title= 'Signup')
+
 
 links= []
 
@@ -29,8 +25,7 @@ def newlink():
         link= request.form['link']
         links.append(link)
 
-    template = jinja_env.get_template('userpage.html')
-    return template.render(links=links)
+    return render_template('userpage.html', links=links)
 
 
 app.run()
