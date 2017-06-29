@@ -7,17 +7,21 @@
     </head>
 
 <body>
-    <button type="button" class="button" style="float:right";>Signup</button></h3>
-    <br>
-    <br>
-    <br>
+    <form action="/signup" method= "get">
+        <a href="/Users/DWAYNE/desktop/My-Homepage-App/templates/index.html">
+            <button class="button" style="float:right";>Signup</button>
+        </a>
+    </form>
+            <br>
+            <br>
+            <br>
     <center>
-        <a href="index.html">
-        <img src="static/Images/BlueGreenLogo.png" height="350" width ="350" >
+        <a href="/signup">
+            <img src="static/Images/BlueGreenLogo.png" height="300" width ="300" >
     </a>
 
     <h1 class="header">Login</h1>
-<form method="post">
+<form action= "/mylinks" method="get">
     <table>
         <tr>
             <td><label for="username">Username</label></td>
@@ -34,7 +38,8 @@
             </td>
         </tr>
     </table>
-    <input type="submit" class="submit">
+    <!-- <input type="submit" class="submit"> -->
+    <button class="submit">Submit</button>
 </form>
     <br>
     <br>

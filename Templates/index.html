@@ -2,20 +2,24 @@
 
 {% block content %}
 
+<form action="/login" method="get">
     <a href="/Users/DWAYNE/desktop/My-Homepage-App/templates/login.html">
         <button class="button" style="float:right">Login</button>
     </a>
+</form>
         <br>
         <br>
         <br>
     <center>
         <a href="index.html">
         <img src="static/Images/BlueGreenLogo.png"
-        height="350" width ="350" >
+        height="300" width ="300" >
     </a>
 
-    <h1 class="header">Signup</h1>
-<form method="get">
+<h1 class="header">Signup</h1>
+
+<!-- method should be post for form submission -->
+<form action= "/mylinks" method="get">
     <table>
         <tr>
             <td><label for="username">Username</label></td>
@@ -46,8 +50,11 @@
             </td>
         </tr>
     </table>
-    <input type="submit" class="submit">
+    <!-- <input type="submit" class="submit">-->
+    <button class="submit">Submit</button>
 </form>
+
+
     <br>
     <br>
     <br>

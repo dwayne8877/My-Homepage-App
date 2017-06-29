@@ -6,17 +6,19 @@
     </head>
 
 <body>
-    <img a href="" height="50" width="50"
-        src="file:///Users/DWAYNE/Desktop/My-Homepage-App/static/Images/Settings%20Button%20.png">
-
-<button type="button" class="button" style="float:right";>Logout</button></h3>
-
+    
+<form action="/logout" method= "get">
+    <button class="button" style="float:right";>Logout</button>
+</form>
+<br>
+<br>
+<br>
     <center>
         <a href="index.html">
-            <img src="static/Images/BlueGreenLogo.png" height="350" width ="350" >
+            <img src="static/Images/BlueGreenLogo.png" height="300" width ="300" >
     </a>
 
-        <h1 class="header">Welcome Darrell!</h1>
+        <h1 class="header">Welcome, {{username}}!</h1>
 
 
 <form action='mylinks' method= 'post'>
@@ -26,7 +28,7 @@
             <input id ="addlink" name="link" type="text">
         </label>
 
-        <input type="submit" value="Add Your Link!" />
+        <input class="button" type="submit" value="Add Your Link!" />
     </p>
 </form>
 
@@ -39,15 +41,13 @@
             {% if links|length == 0 %}
             <p>You haven't added any links yet!</p>
             {% else%}
-                <ul>
+                <l>
                     {% for link in links %}
-                    <li>  {{link}} </li>
+                    <li><a href="http://www..com"+ {{link}} + ".com"> {{link}} </a> </li>
                     {% endfor %}
-                </ul>
+                </l>
 
             {% endif %}
-
-
 
 
         <br>
