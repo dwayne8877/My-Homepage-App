@@ -6,11 +6,6 @@ import os
 app = Flask(__name__)
 app.config['DEBUG'] = True
 
-
-#@app.route("/")
-#def index():
-#    return "Hello World"
-
 @app.route("/")
 def index():
     return render_template('index.html', title= 'Signup')
@@ -38,6 +33,13 @@ def newlink():
         links.append(link)
     #username= request.form['username']
     return render_template('userpage.html', links=links)#username=username)
+
+href_url=[]
+
+def route_link(link):
+    for link in links:
+        new_link= "http://www." + link + ".com"
+        href_url.append(new_link)
 
 
 app.run()

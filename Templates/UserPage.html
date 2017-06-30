@@ -6,7 +6,7 @@
     </head>
 
 <body>
-    
+
 <form action="/logout" method= "get">
     <button class="button" style="float:right";>Logout</button>
 </form>
@@ -14,12 +14,11 @@
 <br>
 <br>
     <center>
-        <a href="index.html">
+        <a href="/mylinks?username= password= verify= email=">
             <img src="static/Images/BlueGreenLogo.png" height="300" width ="300" >
-    </a>
+        </a>
 
         <h1 class="header">Welcome, {{username}}!</h1>
-
 
 <form action='mylinks' method= 'post'>
     <p>
@@ -40,10 +39,12 @@
 
             {% if links|length == 0 %}
             <p>You haven't added any links yet!</p>
-            {% else%}
+            {% else %}
                 <l>
                     {% for link in links %}
-                    <li><a href="http://www..com"+ {{link}} + ".com"> {{link}} </a> </li>
+
+                 <li><a href=""> {{link}} </a> </li>
+
                     {% endfor %}
                 </l>
 
