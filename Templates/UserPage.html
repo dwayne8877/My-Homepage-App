@@ -14,28 +14,26 @@
 <br>
 <br>
     <center>
-        <a href="/mylinks?username= password= verify= email=">
+        <a href="/">
             <img src="static/Images/BlueGreenLogo.png" height="300" width ="300" >
         </a>
 
         <h1 class="header">Welcome, {{username}}!</h1>
-
-<form action='mylinks' method= 'post'>
+<hr />
+<form action='/' method= 'post'>
     <p>
         <label for="addlink">
             Enter the URL:
-            <input id ="addlink" name="link" type="text">
+            <input id ="addlink" name="link" type="text" >
         </label>
 
         <input class="button" type="submit" value="Add Your Link!" />
+<hr />
     </p>
 </form>
 
-<hr />
     <div>
         <h3>My Links</h3>
-
-
 
             {% if links|length == 0 %}
             <p>You haven't added any links yet!</p>
@@ -43,7 +41,12 @@
                 <l>
                     {% for link in links %}
 
-                 <li><a href=""> {{link}} </a> </li>
+                 <li><a href=""> {{link.name}} </a>
+                     <form method = "POST" action = "/delete-link" style = "display: inline-block;">
+                         <input type = "hidden" name = "link-id" value = {{link.id}} />
+                         <input type = "submit" value = "Delete">
+                     </form>
+                </li>
 
                     {% endfor %}
                 </l>

@@ -7,7 +7,7 @@
     </head>
 
 <body>
-    <form action="/login" method= "get">
+    <form action="/signup" method= "get">
         <a href="/Users/DWAYNE/desktop/My-Homepage-App/templates/index.html">
             <button class="button" style="float:right";>Signup</button>
         </a>
@@ -16,30 +16,32 @@
             <br>
             <br>
     <center>
-        <a href="/signup">
+        <a href="/login">
             <img src="static/Images/BlueGreenLogo.png" height="300" width ="300" >
     </a>
-
+        <hr />
     <h1 class="header">Login</h1>
-<form action= "/mylinks" method="get">
+
+<form action= "/login" method="post">
     <table>
         <tr>
-            <td><label for="username">Username</label></td>
+            <td><label for="email">Email:</label></td>
             <td>
-                <input name="username" type="text" value="">
+                <input name="email" type="email" value="{{email}}">
                 <span class="error"></span>
             </td>
         </tr>
         <tr>
-            <td><label for="password">Password</label></td>
+            <td><label for="password">Password:</label></td>
             <td>
                 <input name="password" type="password">
                 <span class="error"></span>
             </td>
         </tr>
     </table>
-    <button class="submit">Submit</button>
+    <button class="submit" value="Login">Submit</button>
 </form>
+<p>Don't have an account?<a href="/signup">Signup</a> for one!</p>
     <br>
     <br>
     <br>

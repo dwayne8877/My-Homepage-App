@@ -11,49 +11,43 @@
         <br>
         <br>
     <center>
-        <a href="/signup">
+        <a href="/login">
         <img src="static/Images/BlueGreenLogo.png"
         height="300" width ="300" >
     </a>
-
+<hr />
 <h1 class="header">Signup</h1>
 
 <!-- method should be post for form submission -->
-<form action= "/mylinks" method="get">
+<form action= "/signup" method="post">
     <table>
         <tr>
-            <td><label for="username">Username</label></td>
+            <td><label for="email">Email:</label></td>
             <td>
-                <input name="username" type="text" value="">
+                <input name="email" type="email" value="{{email}}">
                 <span class="error"></span>
             </td>
         </tr>
+
         <tr>
-            <td><label for="password">Password</label></td>
+            <td><label for="password">Password:</label></td>
             <td>
                 <input name="password" type="password">
                 <span class="error"></span>
             </td>
         </tr>
         <tr>
-            <td><label for="verify">Verify Password</label></td>
+            <td><label for="verify">Verify Password:</label></td>
             <td>
                 <input name="verify" type="password">
                 <span class="error"></span>
             </td>
         </tr>
-        <tr>
-            <td><label for="email">Email (optional)</label></td>
-            <td>
-                <input name="email" type="email" value="">
-                <span class="error"></span>
-            </td>
-        </tr>
     </table>
     <!-- <input type="submit" class="submit">-->
-    <button class="submit">Submit</button>
+    <button class="submit" value = "signup">Submit</button>
 </form>
-
+<p>Already have an account?<a href="/login">Login</a> here!</p>
 
     <br>
     <br>
